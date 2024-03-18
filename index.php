@@ -1,3 +1,8 @@
+<?php
+ob_start();
+session_start(); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,7 +51,6 @@
 })
   </script>
   <?php
-  session_start();
   include("server/conn.php");
   include('client/header.php');
   include('client/menu.php');

@@ -28,7 +28,7 @@ if (isset($_POST['forgotpassword'])) {
         // Gửi email chứa liên kết đặt lại mật khẩu với mã reset token đến email của người dùng
         $reset_link = "http://localhost/simpview/simpview/client/main/resetpassword.php?token=$reset_token";
         $subject = "Reset password";
-        $message = "Nhấp vào  để đặt lại mật khẩu: $reset_link";
+        $message = "Nhấp vào để đặt lại mật khẩu: $reset_link";
 
         // Gửi email
         if (sendMail($to, $subject, $message)) {

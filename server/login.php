@@ -1,3 +1,8 @@
+<?php
+ob_start();
+session_start(); 
+?>
+
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -51,7 +56,6 @@
     <main class="form-signin text-center">
     <h1 class="fs-1 text-warning my-3 fw-semibold title">Simp View</h1>
         <?php
-        session_start();
         include('conn.php');
         if (isset($_POST['login'])) {
             $username = $_POST['username'];

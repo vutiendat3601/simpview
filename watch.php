@@ -1,5 +1,6 @@
 <?php
-session_start();
+ob_start();
+session_start(); 
 include("server/conn.php");
 $video_id = $_GET['video_id'];
 
