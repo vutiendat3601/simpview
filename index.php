@@ -33,7 +33,15 @@
 </head>
 
 <body>
-
+  <?php
+  ob_start();
+  session_start();
+  include("server/conn.php");
+  include('client/header.php');
+  include('client/menu.php');
+  include('client/main.php');
+  include('client/footer.php');
+  ?>
   <script>
     $(document).ready(function() {
   $(".myvideos").on("mouseover", function(event) {
@@ -45,15 +53,6 @@
   });
 })
   </script>
-  <?php
-  ob_start();
-  session_start();
-  include("server/conn.php");
-  include('client/header.php');
-  include('client/menu.php');
-  include('client/main.php');
-  include('client/footer.php');
-  ?>
 </body>
 
 </html>
