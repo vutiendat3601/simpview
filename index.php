@@ -38,7 +38,6 @@ session_start();
 </head>
 
 <body>
-
   <script>
     $(document).ready(function() {
   $(".myvideos").on("mouseover", function(event) {
@@ -50,7 +49,13 @@ session_start();
   });
 })
   </script>
+<<<<<<< HEAD
   <?php
+=======
+    <?php
+  ob_start();
+  session_start();
+>>>>>>> refs/remotes/origin/main
   include("server/conn.php");
   include('client/header.php');
   include('client/menu.php');
