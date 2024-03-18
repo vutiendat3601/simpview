@@ -17,9 +17,12 @@ if (isset($_GET['token'])) {
             // Cập nhật mật khẩu mới cho người dùng
             $update_sql = "UPDATE users SET password='$newpassword', reset_token=NULL, reset_token_expiration=NULL WHERE email='$email'";
             if ($conn->query($update_sql) === TRUE) {
-                echo '<div style="color: green; text-align: center; font-size: .875rem;">
-                <span>Đặt lại mật khẩu thành công!</span>
-                </div>';
+                echo '<script>
+                setTimeout(function() {
+                    alert("Đặt lại mật khẩu thành công!");
+                    window.location.href = "http://localhost/simpview/simpview/index.php?manage=login";
+                }, 100);
+                </script>';
             } else {
                 echo '<div style="color: red; text-align: center; font-size: .875rem;">
                 <span>Lỗi khi đặt lại mật khẩu!</span>
